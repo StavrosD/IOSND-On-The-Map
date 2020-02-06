@@ -60,12 +60,8 @@ class AddLocationViewController: CustomTextFieldViewController, AlertProtocol {
     
     
     // cancel is used to unwind the segue from the next viewcontroller
-    @IBAction func cancel (_ unwindSegue: UIStoryboardUnwindSegueSource){
+    @IBAction func cancelToAddLocation (_ unwindSegue: UIStoryboardUnwindSegueSource){
         
     }
-    @IBAction func cancelToTab(_ unwindSegue: UIStoryboardSegue){
-              performSegue(withIdentifier: "unwindSegue", sender: self)
-       // }
-        
-    }
+
 }

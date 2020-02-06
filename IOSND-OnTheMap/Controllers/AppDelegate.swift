@@ -11,7 +11,6 @@ import MapKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var studentInformation=[StudentInformation]()
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Overri	de point for customization after application launch.
         return true

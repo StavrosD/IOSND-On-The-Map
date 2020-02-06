@@ -11,11 +11,12 @@ import MapKit
 
 class VerifyAddLocationViewController: UIViewController,AlertProtocol, CommonCodeProtocol,MKMapViewDelegate{
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var locationAddress:String! = "Pyrgos,Greece"
-    var url:String! = "stavros.dim"
+    var locationAddress:String!
+    var url:String!
     var geocoder:CLGeocoder!
     var studentInfo:StudentInformation!
     override func viewDidLoad() {
@@ -25,27 +26,21 @@ class VerifyAddLocationViewController: UIViewController,AlertProtocol, CommonCod
         geocoder = CLGeocoder()
         getLocation()
         studentInfo=StudentInformation(createdAt: "", firstName: "Stavros", lastName: "Dim", latitude: 0.0, longitude: 0.0, mapString: locationAddress, mediaURL: url, objectId: "", uniqueKey: "", updatedAt: "")
-   
-            studentInfo.uniqueKey="12344321"
-            studentInfo.firstName="Stavros"
-            studentInfo.lastName="Dim"
-            studentInfo.mapString=self.locationAddress
-            studentInfo.mediaURL = self.url
         mapView.delegate=self
+        activityIndicator.startAnimating()
     }
     
     func getLocation()
     {
         geocoder.geocodeAddressString( locationAddress , completionHandler: {(locations, error) in
+            self.activityIndicator.stopAnimating()
             if error != nil {
                 self.alert(title: "Error", message: error?.localizedDescription ?? "Unknown error!")
                 self.performSegue(withIdentifier: "unwindToAddLocation", sender: self)
             }
-            
             if locations != nil{
                 let geocodedLocation  = locations?.first
                 self.mapView.removeAnnotations(self.mapView.annotations)
-                
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = (geocodedLocation?.location!.coordinate)!
                 annotation.title  = self.locationAddress
@@ -61,9 +56,7 @@ class VerifyAddLocationViewController: UIViewController,AlertProtocol, CommonCod
             }
         })}
     
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
         let reuseId = "pin"
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
         if pinView == nil {
@@ -75,7 +68,6 @@ class VerifyAddLocationViewController: UIViewController,AlertProtocol, CommonCod
         else {
             pinView!.annotation = annotation
         }
-        
         return pinView
     }
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -103,33 +95,15 @@ class VerifyAddLocationViewController: UIViewController,AlertProtocol, CommonCod
     
     
     @IBAction func finishButtonClicked(_ sender: Any) {
-        var request = URLRequest(url: URL(string: "https://onthemap-api.udacity.com/v1/StudentLocation")!)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        NetworkClient.postLocation(uniqueKey: studentInfo.uniqueKey, firstName: studentInfo.firstName, lastName: studentInfo.lastName, locationAddress: studentInfo.mapString, url: studentInfo.mediaURL, latitude: String(studentInfo.latitude), longitude: String(studentInfo.longitude), completion: handlePostRequest)
         
-        
-        request.httpBody = "{\"uniqueKey\": \"\(studentInfo.uniqueKey)\", \"firstName\": \"\(studentInfo.firstName)\", \"lastName\": \"\(studentInfo.lastName)\",\"mapString\": \"\(studentInfo.mapString)\", \"mediaURL\": \"\(studentInfo.mediaURL)\",\"latitude\": \(studentInfo.latitude), \"longitude\": \(studentInfo.longitude)}".data(using: .utf8)
-        let session = URLSession.shared
-        let task = session.dataTask(with: request) { data, response, error in
-            if error != nil { // Handle error…
-                self.alert(title: "Error", message:error?.localizedDescription ?? "Unknown error")
-                return
-            }
-            if let data = data{
-            
-            print(String(decoding: data, as: UTF8.self))
-                if let postResponse = try? JSONDecoder().decode(PostResponse.self, from: data){
-                    self.studentInfo.objectId = postResponse.objectId
-                    self.studentInfo.createdAt = postResponse.createdAt
-                    self.addStudentInformation(studentInformation: self.studentInfo)
-                    
-                }
-              DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "unwindToTabLocation", sender: self)
-            }
-            }
-        }
-        task.resume()
     }
     
+    func handlePostRequest(success:Bool, errorMessage:String?){
+        if success{
+        self.performSegue(withIdentifier: "unwindToTabController", sender: self)
+        } else {
+            alert(title:"Error",message: errorMessage!)
+        }
+    }
 }

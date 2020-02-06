@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		546266FD23E5B05F0081B089 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 546266FC23E5B05F0081B089 /* Default-568h@2x.png */; };
 		54A93CD623E3056100B7A468 /* AlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A93CD523E3056100B7A468 /* AlertProtocol.swift */; };
 		54A93CD923E374B900B7A468 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A93CD823E374B900B7A468 /* AddLocationViewController.swift */; };
 		54A93CDB23E37B6F00B7A468 /* VerifyAddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A93CDA23E37B6F00B7A468 /* VerifyAddLocationViewController.swift */; };
 		54A93CDD23E3CE5E00B7A468 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A93CDC23E3CE5E00B7A468 /* TabBarControllerViewController.swift */; };
 		54A93CDF23E3CF7500B7A468 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A93CDE23E3CF7500B7A468 /* CustomNavigationController.swift */; };
+		54B5F59223E47D6E00465FF7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B5F59123E47D6E00465FF7 /* NetworkClient.swift */; };
 		54CCCF5D23DCE5B300E5C772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF5C23DCE5B300E5C772 /* AppDelegate.swift */; };
 		54CCCF5F23DCE5B300E5C772 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF5E23DCE5B300E5C772 /* SceneDelegate.swift */; };
 		54CCCF6423DCE5B300E5C772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54CCCF6223DCE5B300E5C772 /* Main.storyboard */; };
@@ -22,17 +24,19 @@
 		54CCCF7C23DE199C00E5C772 /* CustomTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF7B23DE199C00E5C772 /* CustomTextFieldViewController.swift */; };
 		54CCCF7E23DE5CA200E5C772 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF7D23DE5CA200E5C772 /* MapViewController.swift */; };
 		54CCCF8223DE69CD00E5C772 /* StudentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF8123DE69CD00E5C772 /* StudentsTableViewCell.swift */; };
-		54CCCF8423DFA98C00E5C772 /* GetStudentLocationsAPIStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF8323DFA98C00E5C772 /* GetStudentLocationsAPIStruct.swift */; };
+		54CCCF8423DFA98C00E5C772 /* StudentLocationsAPIStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF8323DFA98C00E5C772 /* StudentLocationsAPIStruct.swift */; };
 		54CCCF8923E0F89400E5C772 /* CommonCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF8823E0F89400E5C772 /* CommonCodeProtocol.swift */; };
 		54CCCF8B23E1DE4400E5C772 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CCCF8A23E1DE4400E5C772 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		546266FC23E5B05F0081B089 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		54A93CD523E3056100B7A468 /* AlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProtocol.swift; sourceTree = "<group>"; };
 		54A93CD823E374B900B7A468 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		54A93CDA23E37B6F00B7A468 /* VerifyAddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAddLocationViewController.swift; sourceTree = "<group>"; };
 		54A93CDC23E3CE5E00B7A468 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		54A93CDE23E3CF7500B7A468 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		54B5F59123E47D6E00465FF7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		54CCCF5923DCE5B300E5C772 /* IOSND-OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOSND-OnTheMap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CCCF5C23DCE5B300E5C772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CCCF5E23DCE5B300E5C772 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +49,7 @@
 		54CCCF7B23DE199C00E5C772 /* CustomTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldViewController.swift; sourceTree = "<group>"; };
 		54CCCF7D23DE5CA200E5C772 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		54CCCF8123DE69CD00E5C772 /* StudentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewCell.swift; sourceTree = "<group>"; };
-		54CCCF8323DFA98C00E5C772 /* GetStudentLocationsAPIStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStudentLocationsAPIStruct.swift; sourceTree = "<group>"; };
+		54CCCF8323DFA98C00E5C772 /* StudentLocationsAPIStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationsAPIStruct.swift; sourceTree = "<group>"; };
 		54CCCF8823E0F89400E5C772 /* CommonCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCodeProtocol.swift; sourceTree = "<group>"; };
 		54CCCF8A23E1DE4400E5C772 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +65,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		546266FE23EC190D0081B089 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				54B5F59123E47D6E00465FF7 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		546266FF23EC19230081B089 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5462670023EC19380081B089 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5462670023EC19380081B089 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				54CCCF8123DE69CD00E5C772 /* StudentsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5462670123EC19510081B089 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54CCCF6523DCE5B500E5C772 /* Assets.xcassets */,
+				54CCCF6A23DCE5B500E5C772 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		54A93CD423E3053E00B7A468 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +107,37 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		54B5F59323E486C600465FF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				54A93CD423E3053E00B7A468 /* Protocols */,
+				54A93CD823E374B900B7A468 /* AddLocationViewController.swift */,
+				54CCCF5C23DCE5B300E5C772 /* AppDelegate.swift */,
+				54A93CDE23E3CF7500B7A468 /* CustomNavigationController.swift */,
+				54CCCF7B23DE199C00E5C772 /* CustomTextFieldViewController.swift */,
+				54CCCF7923DE119B00E5C772 /* LoginViewController.swift */,
+				54CCCF7D23DE5CA200E5C772 /* MapViewController.swift */,
+				54CCCF5E23DCE5B300E5C772 /* SceneDelegate.swift */,
+				54A93CDC23E3CE5E00B7A468 /* TabBarControllerViewController.swift */,
+				54CCCF8A23E1DE4400E5C772 /* TableViewController.swift */,
+				54A93CDA23E37B6F00B7A468 /* VerifyAddLocationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		54B5F59423E486F500465FF7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				54CCCF6723DCE5B500E5C772 /* LaunchScreen.storyboard */,
+				54CCCF6223DCE5B300E5C772 /* Main.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		54CCCF5023DCE5B300E5C772 = {
 			isa = PBXGroup;
 			children = (
+				546266FC23E5B05F0081B089 /* Default-568h@2x.png */,
 				54CCCF5B23DCE5B300E5C772 /* IOSND-OnTheMap */,
 				54CCCF5A23DCE5B300E5C772 /* Products */,
 			);
@@ -89,34 +154,23 @@
 		54CCCF5B23DCE5B300E5C772 /* IOSND-OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				54A93CD423E3053E00B7A468 /* Protocols */,
-				54CCCF7423DDFA2F00E5C772 /* Structs */,
-				54A93CD823E374B900B7A468 /* AddLocationViewController.swift */,
-				54CCCF5C23DCE5B300E5C772 /* AppDelegate.swift */,
-				54A93CDE23E3CF7500B7A468 /* CustomNavigationController.swift */,
-				54CCCF7B23DE199C00E5C772 /* CustomTextFieldViewController.swift */,
-				54CCCF7923DE119B00E5C772 /* LoginViewController.swift */,
-				54CCCF7D23DE5CA200E5C772 /* MapViewController.swift */,
-				54CCCF5E23DCE5B300E5C772 /* SceneDelegate.swift */,
-				54CCCF8123DE69CD00E5C772 /* StudentsTableViewCell.swift */,
-				54A93CDC23E3CE5E00B7A468 /* TabBarControllerViewController.swift */,
-				54CCCF8A23E1DE4400E5C772 /* TableViewController.swift */,
-				54A93CDA23E37B6F00B7A468 /* VerifyAddLocationViewController.swift */,
-				54CCCF6523DCE5B500E5C772 /* Assets.xcassets */,
-				54CCCF6A23DCE5B500E5C772 /* Info.plist */,
-				54CCCF6723DCE5B500E5C772 /* LaunchScreen.storyboard */,
-				54CCCF6223DCE5B300E5C772 /* Main.storyboard */,
+				54B5F59423E486F500465FF7 /* Assets */,
+				54B5F59323E486C600465FF7 /* Controllers */,
+				54CCCF7423DDFA2F00E5C772 /* Model */,
+				546266FE23EC190D0081B089 /* Network */,
+				5462670123EC19510081B089 /* Resources */,
+				546266FF23EC19230081B089 /* Views */,
 			);
 			path = "IOSND-OnTheMap";
 			sourceTree = "<group>";
 		};
-		54CCCF7423DDFA2F00E5C772 /* Structs */ = {
+		54CCCF7423DDFA2F00E5C772 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				54CCCF7523DDFA5C00E5C772 /* UdacityAPIStruct.swift */,
-				54CCCF8323DFA98C00E5C772 /* GetStudentLocationsAPIStruct.swift */,
+				54CCCF8323DFA98C00E5C772 /* StudentLocationsAPIStruct.swift */,
 			);
-			path = Structs;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54CCCF6923DCE5B500E5C772 /* LaunchScreen.storyboard in Resources */,
+				546266FD23E5B05F0081B089 /* Default-568h@2x.png in Resources */,
 				54CCCF6623DCE5B500E5C772 /* Assets.xcassets in Resources */,
 				54CCCF6423DCE5B300E5C772 /* Main.storyboard in Resources */,
 			);
@@ -197,13 +252,14 @@
 				54A93CDD23E3CE5E00B7A468 /* TabBarControllerViewController.swift in Sources */,
 				54CCCF7A23DE119B00E5C772 /* LoginViewController.swift in Sources */,
 				54A93CD623E3056100B7A468 /* AlertProtocol.swift in Sources */,
+				54B5F59223E47D6E00465FF7 /* NetworkClient.swift in Sources */,
 				54CCCF8B23E1DE4400E5C772 /* TableViewController.swift in Sources */,
 				54A93CDB23E37B6F00B7A468 /* VerifyAddLocationViewController.swift in Sources */,
 				54A93CD923E374B900B7A468 /* AddLocationViewController.swift in Sources */,
 				54CCCF5F23DCE5B300E5C772 /* SceneDelegate.swift in Sources */,
 				54CCCF7E23DE5CA200E5C772 /* MapViewController.swift in Sources */,
 				54A93CDF23E3CF7500B7A468 /* CustomNavigationController.swift in Sources */,
-				54CCCF8423DFA98C00E5C772 /* GetStudentLocationsAPIStruct.swift in Sources */,
+				54CCCF8423DFA98C00E5C772 /* StudentLocationsAPIStruct.swift in Sources */,
 				54CCCF8923E0F89400E5C772 /* CommonCodeProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KGAZ25CZ2W;
-				INFOPLIST_FILE = "IOSND-OnTheMap/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/IOSND-OnTheMap/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KGAZ25CZ2W;
-				INFOPLIST_FILE = "IOSND-OnTheMap/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/IOSND-OnTheMap/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
